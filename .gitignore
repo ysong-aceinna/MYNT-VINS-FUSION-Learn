@@ -21,3 +21,4 @@ config/mynteye-d/device_params_left.yaml
 config/mynteye-d/device_params_right.yaml
 config/mynteye-s/device_params_left.yaml
 config/mynteye-s/device_params_right.yaml
+.DS_Store
