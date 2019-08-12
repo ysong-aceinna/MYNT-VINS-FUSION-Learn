@@ -7,7 +7,7 @@ num_of_cam: 1
 
 imu_topic: "/mynteye/imu/data_raw"
 image0_topic: "/mynteye/left/image_color"
-output_path: "/home/zhangs/vins_fusion/"
+output_path: "/home/song/vins_fusion/"
 
 cam0_calib: "left_equ.yaml"
 #cam0_calib: "left_pinhole.yaml"
@@ -24,10 +24,17 @@ body_T_cam0: !!opencv-matrix
    rows: 4
    cols: 4
    dt: d
-   data: [0.99998445,  0.00555305,  0.00052062, -0.04946165,
-          0.00555071, -0.99997494,  0.00439407,  0.00338784,
-          0.00054501, -0.00439112, -0.99999021, -0.02364851,
-           0, 0, 0, 1]
+   # default of github
+   # data: [0.99998445,  0.00555305,  0.00052062, -0.04946165,
+   #        0.00555071, -0.99997494,  0.00439407,  0.00338784,
+   #        0.00054501, -0.00439112, -0.99999021, -0.02364851,
+   #         0, 0, 0, 1]
+   
+   #D1000-50:
+   data: [0.99996651999999997, 0.00430873000000000, 0.00695718000000000, -0.04777362000000000108,
+         0.00434878000000000, -0.99997400999999997, -0.00575128000000000, -0.00223730999999999991,
+         0.00693222000000000, 0.00578135000000000, -0.99995926000000002, -0.00160071000000000008,
+         0, 0, 0, 1]
 
 #Multiple thread support
 multiple_thread: 1
@@ -65,5 +72,5 @@ td: 0.0                             # initial value of time offset. unit: s. rea
 
 #loop closure parameters
 load_previous_pose_graph: 0        # load and reuse previous pose graph; load from 'pose_graph_save_path'
-pose_graph_save_path: "/home/zhangs/vins_fusion/pose_graph/" # save and load path
+pose_graph_save_path: "/home/song/vins_fusion/pose_graph/" # save and load path
 save_image: 1                   # save image in pose graph for visualization prupose; you can close this function by setting 0 
